@@ -4,6 +4,8 @@ from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTransformationConfig
+from src.components.data_transformation import DataTransformation
 from dataclasses import dataclass
 
 
@@ -58,6 +60,9 @@ class DataIngestion:
 if __name__=="__main__":
     obj=DataIngestion()
     raw_data_ingestion=obj.initiate_data_ingestion()
+
+    obj2 = DataTransformation()
+    train_arr, test_arr, obj_file_path = obj2.initiate_data_transformation()
 
    
 
