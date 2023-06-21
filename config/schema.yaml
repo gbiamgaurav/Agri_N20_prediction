@@ -2,6 +2,7 @@ drop_columns:
 "VegType"
 "Date", 
 "Experiment",
+"Month"
 "Sand",
 "SOM", 
 "Clay",

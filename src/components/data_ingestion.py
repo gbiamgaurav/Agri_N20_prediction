@@ -28,7 +28,8 @@ class DataIngestion:
                                   "Experiment",
                                   "Sand", "SOM", "Clay",
                                   "Year",
-                                  "N_rate"], axis=1)
+                                  "N_rate",
+                                  "Month"], axis=1)
             
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
 
@@ -48,8 +49,6 @@ class DataIngestion:
             return self.ingestion_config.raw_data_path
             return self.ingestion_config.train_data_path
             return self.ingestion_config.test_data_path
-
-
             
         except Exception as e:
             raise CustomException(e,sys)
