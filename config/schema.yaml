@@ -1,0 +1,9 @@
+drop_columns:
+"VegType"
+"Date", 
+"Experiment",
+"Sand",
+"SOM", 
+"Clay",
+"Year",
+"N_rate"

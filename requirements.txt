@@ -19,5 +19,5 @@ streamlit
 jupyter
 tensorflow
 optuna
-pickle
+
 -e .
