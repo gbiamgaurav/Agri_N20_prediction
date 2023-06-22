@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTransformationConfig
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
 from dataclasses import dataclass
 
 
@@ -63,6 +64,11 @@ if __name__=="__main__":
 
     obj2 = DataTransformation()
     train_arr, test_arr, obj_file_path = obj2.initiate_data_transformation()
+
+    obj3 = ModelTrainer()
+    print(obj3.initiate_model_trainer(train_arr,test_arr))
+
+
 
    
 
