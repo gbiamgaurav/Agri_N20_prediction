@@ -23,7 +23,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df = pd.read_csv("notebook\data\dataset.csv")
+            df = pd.read_csv("notebook/data/dataset.csv")
             logging.info('Read the dataset as dataframe')
 
             df = df.drop(columns=["VegType", 

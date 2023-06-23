@@ -1,88 +1,64 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N20 Prediction</title>
-
-    <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Home</title>
 </head>
-
 <body>
-    <!-- As a heading -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">N20 Prediction</a>
-            </div>
-        </div>
-    </nav>
-
-    <br><br><br>
-
-    <div class="container">
-        <form action="{{ url_for('predict_n20')}}" method="post">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">NH4</h5>
-                        <input type="number" name="NH4" step="0.01" placeholder="Enter NH4 value">
-
-                        <h5 class="card-title">NO3</h5>
-                        <input type="number" name="NO3" step="0.01" placeholder="Enter NO3 value">
-
-                        <h5 class="card-title">WFPS25cm</h5>
-                        <input type="number" name="WFPS25cm" step="0.01" placeholder="Enter WFPS25cm value">
-
-                        <h5 class="card-title">Replication</h5>
-                        <input type="number" name="Replication" placeholder="Enter Replication value">
-
-                        <h5 class="card-title">PP7</h5>
-                        <input type="number" name="PP7" step="0.01" placeholder="Enter PP7 value">
-
-                        <h5 class="card-title">DAF_TD</h5>
-                        <input type="number" name="DAF_TD" step="0.01" placeholder="Enter DAF_TD value">
-
-                        <h5 class="card-title">AirT</h5>
-                        <input type="number" name="AirT" step="0.01" placeholder="Enter AirT value">
-
-                        <h5 class="card-title">PP2</h5>
-                        <input type="number" name="PP2" step="0.01" placeholder="Enter PP2 value">
-
-                        <h5 class="card-title">Month</h5>
-                        <input type="number" name="Month" placeholder="Enter Month value">
-
-                        <h5 class="card-title">DAF_SD</h5>
-                        <input type="number" name="DAF_SD" step="0.01" placeholder="Enter DAF_SD value">
-                    </div>
-                </div>
-            </div>
-
-            <br><br><br>
-            <!-- Submit -->
-            <input type="submit" value="Predict N20" class="btn btn-secondary">
-        </form>
-
-        <br><br>
-        <h3>{{ results }}</h3>
-
-        <br><br>
-        <p>Debojit Mandal</p>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <h1>Enter Data for Prediction</h1>
+    <form action="/predict_datapoint" method="post">
+        <label for="NH4">NH4:</label>
+        <input type="text" id="NH4" name="NH4" required><br><br>
+        
+        <label for="NO3">NO3:</label>
+        <input type="text" id="NO3" name="NO3" required><br><br>
+        
+        <label for="WFPS25cm">WFPS25cm:</label>
+        <input type="text" id="WFPS25cm" name="WFPS25cm" required><br><br>
+        
+        <label for="Replication">Replication:</label>
+        <select id="Replication" name="Replication" required>
+            <option value="R1">R1</option>
+            <option value="R2">R2</option>
+            <option value="R3">R3</option>
+            <option value="R4">R4</option>
+            <option value="R5">R5</option>
+        </select><br><br>
+        
+        <label for="PP7">PP7:</label>
+        <input type="text" id="PP7" name="PP7" required><br><br>
+        
+        <label for="DAF_TD">DAF_TD:</label>
+        <input type="text" id="DAF_TD" name="DAF_TD" required><br><br>
+        
+        <label for="AirT">AirT:</label>
+        <input type="text" id="AirT" name="AirT" required><br><br>
+        
+        <label for="PP2">PP2:</label>
+        <input type="text" id="PP2" name="PP2" required><br><br>
+        
+        <label for="Month">Month:</label>
+        <select id="Month" name="Month" required>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select><br><br>
+        
+        <label for="DAF_SD">DAF_SD:</label>
+        <input type="text" id="DAF_SD" name="DAF_SD" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <h2>
+        The Prediction is {{results}}
+    </h2>
 </body>
 </html>

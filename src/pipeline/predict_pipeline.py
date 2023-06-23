@@ -29,14 +29,13 @@ class CustomData:
         NH4: float,
         NO3: float,
         WFPS25cm: float,
-        Replication: float,
+        Replication: str,
         PP7: float,
-        DAF_TD: float,
+        DAF_TD: int,
         AirT: float,
         PP2: float,
-        Month: float,
-        DAF_SD: float
-        ):
+        Month: str,
+        DAF_SD: int):
 
         self.NH4 = NH4
         self.NO3 = NO3
