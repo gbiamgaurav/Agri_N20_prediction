@@ -34,7 +34,6 @@ class CustomData:
         DAF_TD: int,
         AirT: float,
         PP2: float,
-        Month: str,
         DAF_SD: int):
 
         self.NH4 = NH4
@@ -45,7 +44,6 @@ class CustomData:
         self.DAF_TD = DAF_TD
         self.AirT = AirT
         self.PP2 = PP2
-        self.Month = Month
         self.DAF_SD = DAF_SD
 
     def get_data_as_data_frame(self):
@@ -59,7 +57,6 @@ class CustomData:
                 "DAF_TD": [self.DAF_TD],
                 "AirT": [self.AirT],
                 "PP2": [self.PP2],
-                "Month": [self.Month],
                 "DAF_SD": [self.DAF_SD]
                 
             }
