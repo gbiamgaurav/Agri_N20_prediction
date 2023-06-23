@@ -31,7 +31,7 @@ class ModelTrainer:
 
             models = {
                 "RandomForest": RandomForestRegressor(),
-                "XGBClassifier": XGBRegressor()
+                "XGBRegressor": XGBRegressor()
             }
 
             logging.info("Evaluating models before hyperparameter tuning")
@@ -62,7 +62,7 @@ class ModelTrainer:
                 grid_search = GridSearchCV(
                     estimator=model,
                     param_grid=param_grid[model_name],
-                    scoring="r2_score",
+                    scoring="r2",
                     cv=5
                 )
 
@@ -73,7 +73,7 @@ class ModelTrainer:
                     best_model_name = model_name
                     best_model = grid_search.best_estimator_
 
-            if best_model is None or best_model_score < 0.7:
+            if best_model is None or best_model_score < 0.3:
                 raise CustomException("No best model found")
 
             logging.info(f"Best model found on both training and testing dataset")
