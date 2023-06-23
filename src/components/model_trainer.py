@@ -34,16 +34,16 @@ class ModelTrainer:
             }
             params = {
                 "Random Forest": {
-                    'n_estimators': [8, 16, 32, 64, 128, 256, 300],
-                    "max_depth": [None, 5, 10],
-                    "min_samples_split": [2, 5, 10]
+                    'n_estimators': [8, 16, 32, 64, 128, 256],
+                    #"max_depth": [None, 5, 10],
+                    #"min_samples_split": [2, 5, 10]
                     
                 },
 
                 "XGBRegressor": {
                     'learning_rate': [.1, .01, .05, .001],
-                    'n_estimators': [8, 16, 32, 64, 128, 256, 300],
-                    "max_depth": [3, 5, 7],
+                    'n_estimators': [8, 16, 32, 64, 128, 256],
+                    #"max_depth": [3, 5, 7],
                 }
 
             }

@@ -8,7 +8,7 @@ scipy
 ipykernel
 notebook
 dill
-Flask
+flask
 six
 plotly
 pycaret
