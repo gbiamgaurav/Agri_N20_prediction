@@ -34,7 +34,9 @@ class CustomData:
         DAF_TD: int,
         AirT: float,
         PP2: float,
-        DAF_SD: int):
+        DAF_SD: int,
+        DataUse: str,
+        Vegetation: str):
 
         self.NH4 = NH4
         self.NO3 = NO3
@@ -45,6 +47,8 @@ class CustomData:
         self.AirT = AirT
         self.PP2 = PP2
         self.DAF_SD = DAF_SD
+        self.DataUse = DataUse
+        self.Vegetation = Vegetation
 
     def get_data_as_data_frame(self):
         try:
@@ -57,7 +61,9 @@ class CustomData:
                 "DAF_TD": [self.DAF_TD],
                 "AirT": [self.AirT],
                 "PP2": [self.PP2],
-                "DAF_SD": [self.DAF_SD]
+                "DAF_SD": [self.DAF_SD],
+                "DataUse": [self.DataUse],
+                "Vegetation": [self.Vegetation]
                 
             }
 
