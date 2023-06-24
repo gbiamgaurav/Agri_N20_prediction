@@ -40,4 +40,5 @@ df.to_csv(csv_file_path, index=False)
 
 # Print the shape of the data
 print("Data shape:", df.shape)
+
 print("Data exported successfully")
