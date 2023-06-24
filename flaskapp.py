@@ -38,6 +38,6 @@ def predict_datapoint():
         except Exception as e:
             error_message = f"Error occurred: {str(e)}"
             return render_template('home.html', error=error_message)
-
-""" if __name__ == "__main__":
-    app.run(host='0.0.0.0') """
+        
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
