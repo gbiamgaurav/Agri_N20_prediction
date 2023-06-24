@@ -9,7 +9,8 @@
 ## install dependencies
 `pip install -r requirements.txt`
 
-## Run the commands 
+## Run the commands
+ 
 `sudo apt-get update -y`
 
 `sudo apt-get upgrade`
