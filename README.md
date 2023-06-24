@@ -11,12 +11,18 @@
 
 ## Run the commands 
 `sudo apt-get update -y`
+
 `sudo apt-get upgrade`
+
 `curl -fsSL https://get.docker.com -o get-docker.sh`
+
 `sudo sh get-docker.sh`
+
 `sudo usermod -aG docker ubuntu`
+
 `newgrp docker`
-`docker --version
+
+`docker --version`
 
 ## Build a local docker image
 `docker build -t n20_prediction .`
