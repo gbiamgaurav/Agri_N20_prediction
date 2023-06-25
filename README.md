@@ -1,5 +1,8 @@
 # Agri_N20_prediction
 
+## Please find the app [here](https://agri-n20-prediction.streamlit.app/).
+
+
 ## Create env
 `conda create -p agri python==3.8 -y`
 
@@ -31,5 +34,3 @@
 ## Run the image
 `docker run -p 8080:8080 n20_prediction`
 
-## run the command below 
-`gcloud builds submit --tag gcr.io/<PROJECT_ID>/<SOME_PROJECT_NAME>--timeout=2h`
