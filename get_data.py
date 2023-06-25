@@ -42,4 +42,9 @@ df.to_csv(csv_file_path, index=False)
 print("Data shape:", df.shape)
 
 print("Data exported successfully")
+<<<<<<< HEAD
 #
+=======
+
+# 
+>>>>>>> 32f792ef4443342a6d3ecefe54aaed5741c158e0
